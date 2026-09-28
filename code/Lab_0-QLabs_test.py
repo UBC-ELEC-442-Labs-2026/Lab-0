@@ -4,12 +4,10 @@ import sys
 import time
 import numpy as np
 
-#import constants
+import constants
 from pal.products.qarm import QArm
 
-#directory_path = os.path.dirname(constants.path_to_interface)
-
-directory_path = os.path.dirname("C:/Evan/UBC/TLEF_coop/Labs/Concepts/repos/lab-machine-env/QArm-control/QArm_functions.py")
+directory_path = os.path.dirname(constants.path_to_interface)
 if directory_path not in sys.path:
     sys.path.append(directory_path)
 
