@@ -7,7 +7,13 @@
 > This guide assumes you are familiar with Python code, but does not assume that you are familiar with installing Python, the VS Code IDE, or using Git.
 
 # For all students
-These are core software components that you will need for this class. Lab 0 will give you a chance to install, then test these to ensure you are prepared for the upcoming labs.
+Steps 1 through 4 are core software components that you will need for this class. Lab 0 will give you a chance to install, then test these to ensure you are prepared for the upcoming labs.
+
+Steps 5 through 8 are additional components that are available to Windows users. If you have access to a Windows machine, it is strongly recommended that you complete those steps as well. This allows for use of the virtual QArm and additional libraries.
+
+## A note for macOS users
+
+This guide is mainly written with Windows users in mind as using Windows is strongly recommended. For proceeding macOS users, any reference to the **Windows Start menu** and **Powershell** can be substituted for **Launchpad** and **Terminal**, respectively. Additionally, the macOS equivalent of `C:/Users/user/Documents/Quanser` is `/Users/user/Documents/`. For convenience, this guide contains Non-Windows software download links below Windows software download links.
 
 ## 1. Install Git
 
@@ -49,26 +55,34 @@ The install location is up to you. However, Quanser recommends downloading their
 
 If you already have Python, Quanser supports versions 3.11 to 3.14. Otherwise we recommend Python 3.13.
 
-1. Download [Python 3.13.11](https://www.python.org/ftp/python/3.13.11/python-3.13.11-amd64.exe).
+1. Download [Python 3.13.11](https://www.python.org/ftp/python/3.13.11/python-3.13.11-amd64.exe) for Windows.
+- Or, download [Python 3.13.11](https://www.python.org/downloads/) for non-Windows users.
 
 2. Install. When prompted, select the *Add Python to PATH* option in the first menu of the installer.
+- This menu option does not appear for macOS users as it is automatic.
 
-### Set up Python Libraries
+### For Non-Windows users
 
-The only key library required to be installed for all users is numpy:
-+ Open a terminal instance anywhere
-+ run: `pip install numpy`
+The only core library required for all users is `numpy`. For non-Windows users or Windows users skipping the [Windows Computers Only](#windows-computers-only) section, install `numpy` now. Those that intend to complete that section should skip this step.
+
+1. Open a **Terminal** instance anywhere
+2. Run:
+
+   ```text
+   pip install numpy
+   ```
 
 ## 4. Install Visual Studio Code
 
 You can use any local IDE you like, but we recommend VS Code. Cloud-based code editors will not work.
 
-1. Download [Visual Studio Code](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) and install.
+1. Download [Visual Studio Code](https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user) for Windows and install.
+- Or, download [Visual Studio Code](https://code.visualstudio.com/download) for non-Windows users and install.
 
 # Windows Computers Only
 > This guide is an adapation of Quanser's own [PC setup guide](https://github.com/quanser/Quanser_Academic_Resources/blob/dev-windows/docs/pc_setup.md). This version is intended to be more streamlined for ELEC 442. It also includes the cloning of `lab-machine-env`, a custom respository that supporst this course's labs. If you intend to use MATLAB or connect to the QArm hardware, follow their guide first.
 
-The following sections take you through installing tools used to run the virtual QArm. Unfortunately, this is only possible on a windows machine. While it will be a useful tool and is strongly recommended, it is not necessary for any exercises outside the labs. Inside the labs, one windows laptop per QArm will be provided.
+The following sections take you through installing tools used to run the virtual QArm. Unfortunately, this is only possible on a Windows machine. While it is useful and is strongly recommended, it is not stricly necessary for any exercises outside the labs. Inside the labs, one pre-configured Windows laptop per QArm will be provided.
 
 ## 5. Install Quanser SDK and Quanser Interactive Labs
 
