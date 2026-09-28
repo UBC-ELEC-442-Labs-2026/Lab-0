@@ -10,7 +10,7 @@ Welcome to Lab 0! This lab will be an introductory lab, giving you a chance to i
 `setup_instructions/` contains the two markdown files referenced in Lab 0. These documents lead you step by step through the setup process.
 
 2. **[Personal Computer Software Installation](setup_instructions/personal-software-installation.md)**  
-   Install the software and Quanser dependencies required to run the labs on a personal computer. Complete this first if you have not already set up your computer.
+   Install the software and Quanser dependencies required to run the labs on a personal computer. Complete this **before** tackling `Personal Computer Setup`. 
 
 3. **[Personal Computer Setup](setup_instructions/personal-computer-setup.md)**  
    Set up the lab repository, VS Code, Python interpreter, Git workflow, and submission process on your personal computer.
