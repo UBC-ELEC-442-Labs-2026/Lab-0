@@ -14,6 +14,7 @@ Welcome to Lab 0! This lab will be an introductory lab, giving you a chance to i
 
 3. **[Personal Computer Setup](setup_instructions/personal-computer-setup.md)**  
    Set up the lab repository, VS Code, Python interpreter, Git workflow, and submission process on your personal computer.
+   - Those that are less familiar are encouraged to go through the instructions and setup a lab 0 respository as if it was a real lab. Doing so should prepare you well for setting up labs 1 and 2. However, you are not required to as there are no teammates nor submission process for lab 0.
    - As of September 24, 2026 there remains a bug in the Quanser Academic Resources downloaded in `Personal Computer Software Installation`. You can fix it by reading the [bug fix](setup_instructions/additional/bug-fix.md).
 
 `code/` contains python code used to test your system.

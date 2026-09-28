@@ -63,7 +63,7 @@ If you are already comfortable with VS Code, Python interpreters, Git, and GitHu
    If an existing repository is renamed, its owner does not need to clone it again. Updating the saved remote URL is optional:
 
    ```text
-   git remote set-url origin https://github.com/your-user-name/ELEC442-LabX-TeamYY
+   git remote set-url origin https://github.com/your-user-name/ELEC442-Lab<lab_num>-Team<2_digit_team_num>
    ```
 
 8. From this point onward, all teammates should work from the same team repository and keep it synced with GitHub.
