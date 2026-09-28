@@ -2,7 +2,7 @@
 
 **Last updated:** September 24, 2026  
 
-> This guide is for a Windows **personal computer**. Lab computers have already been configured.
+> This guide is for a **personal computer**. Lab computers have already been configured.
 
 > This guide assumes you have followed through the steps of `personal-software-installation.md`.
 
