@@ -217,7 +217,7 @@ Choose one of the following options:
    Optionally, they can update the saved GitHub address directly:
 
    ```text
-   git remote set-url origin https://github.com/your-user-name/ELEC442-LabX-TeamYY
+   git remote set-url origin https://github.com/your-user-name/ELEC442-Lab<lab_num>-Team<2_digit_team_num>
    ```
 
    The local folder itself does not need to be renamed.
