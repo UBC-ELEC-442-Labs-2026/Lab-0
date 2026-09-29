@@ -1,100 +1,89 @@
 # ELEC 442 QArm Lab Computer Quick Start
 
-**Last updated:** September 25, 2026  
+**Last updated:** September 28, 2026
 
-> This guide is for a configured ELEC 442 **lab computer**. Do not reinstall Python, create a virtual environment, or install course software.
-
-## Before the Lab
-
-Your team should already have created its shared repository as described in [Personal Computer Setup](personal-computer-setup.md).
+> Lab computers are already configured. Do not reinstall Python, install packages, or run the personal-computer setup scripts.
 
 ## 1. Open Your Team Repository
 
-Open **PowerShell** or a VS Code terminal and go to your Documents folder:
+Your team should have a [private shared repository](personal-computer-setup.md#in-class-lab) with access for all teammates and the required TA(s).
+
+Copy the team's HTTPS URL from GitHub using **Code > HTTPS**. Open **PowerShell**, or choose **Terminal > New Terminal** in VS Code, and run:
 
 ```text
 cd ~/Documents
-```
-
-If this is the first time your team repository has been used on this computer, clone it:
-
-```text
 git clone <repository-URL>
 cd <repository-name>
 code .
 ```
 
-If the repository is already on this computer, do not clone it again. Open the existing repository and make sure it is up to date before starting work.
+Replace the placeholders, including the angle brackets, with your team's URL and folder name (e.g. `ELEC442-Lab1-Team03`). If prompted to sign into GitHub, use an account with access to the team repository.
 
-Refer to [Using Git and the Command Line](personal-computer-setup.md#using-git-and-the-command-line) for an example of a typical Git workflow.
+If already cloned, skip `git clone` and open the existing folder. Use the repository's **top-level folder**, not just its `code` subfolder, so VS Code loads the lab's workspace settings. If `code .` is not recognized, use **File > Open Folder**. Choose **Trust** if prompted, after checking that this is your team's folder.
 
-## 2. Trust the Repository
+## 2. Get the Latest Code
 
-The first time VS Code opens the repository, it may enter Restricted Mode.
+From inside the repository, run:
 
-1. Click **Manage**.
-2. Confirm that this is your team's lab repository.
-3. Click **Trust**.
+```text
+git fetch
+git status
+```
+
+If your branch is behind GitHub and you have no uncommitted changes, run:
+
+```text
+git pull --ff-only
+```
+
+If there are changes left from an earlier session, review them with your team before continuing. For uncommitted changes or a failed pull, follow the [Git troubleshooting steps](personal-computer-setup.md#if-the-pull-does-not-succeed).
 
 ## 3. Complete the Lab
 
-Follow the lab instructions for QArm startup, operation, and shutdown.
+Follow the lab instructions for QArm startup, operation, and shutdown. Edit your team's files; the support code and demos in the desktop `lab-machine-env` shortcut are read-only.
 
-The lab computer is already configured. Do not install Python packages, create another environment, or modify shared files. You may add additional VS Code Extensions. 
+If Python is missing or imports fail, use the [interpreter steps below](#python-interpreter-is-missing-or-incorrect).
 
-If the preconfigured environment does not work as expected, tell a TA. For an interpreter or import fail, see [troubleshooting](#python-interpreter-is-missing-or-incorrect).
-
-There is a desktop shortcut to `lab-machine-env` which contains some read-only demo files.
+Save and share useful progress throughout the session using VS Code's **Source Control** panel: review your changes, stage them with **+**, enter a commit message, then **Commit** and **Sync Changes**. See [Saving and sharing your work](personal-computer-setup.md#saving-and-sharing-your-work) for details.
 
 ## 4. Before Signing Out
 
-Commit and sync your work to GitHub before signing out of the lab computer.
-
-Confirm on GitHub that your latest commit appears in the team repository.
-
-Then close the lab programs and sign out of Windows.
+- Shut down the QArm as instructed and stop running scripts.
+- Save, stage, **Commit**, and **Sync Changes** in VS Code. Confirm your latest commit and files appear on GitHub before leaving. If syncing fails, resolve the error or save a separate copy of your work.
+- Submit your work to Canvas when required by the lab instructions. Pushing to GitHub does not submit your lab; see the [submission instructions](personal-computer-setup.md#code-submission).
+- Close the lab programs and sign out of Windows.
 
 ## Troubleshooting
 
 ### Python interpreter is missing or incorrect
 
-The lab computer should automatically use the shared ELEC 442 Python environment.
-
-You may need to select it manually if:
-
-- VS Code asks you to **Select Interpreter**;
-- the Python file does not run because no interpreter is selected;
-- imports fail with `ModuleNotFoundError`; or
-- VS Code shows unresolved-import warnings for packages that should already be installed.
-
-To select the shared course interpreter:
-
-1. Press `Ctrl+Shift+P` to open the Command Palette.
-2. Search for and select **Python: Select Interpreter**.
-3. If this path already appears, select it:
+1. Open a `.py` file, press `Ctrl+Shift+P`, and select **Python: Select Interpreter**.
+2. Select the following interpreter, or use **Enter interpreter path** to paste it:
 
    ```text
    C:\ProgramData\Qarm\Python\venv\Scripts\python.exe
    ```
 
-4. If it does not appear, choose **Enter interpreter path…**.
-5. Choose **Find…** or paste/type the full path:
+3. Close existing VS Code terminals, open a new one, and retry.
 
-   ```text
-   C:\ProgramData\Qarm\Python\venv\Scripts\python.exe
-   ```
-
-6. Press Enter.
-
-If you are unsure which interpreter VS Code is using, run:
+To check which Python VS Code actually runs, put these lines in a temporary `.py` file and choose **Run Python File in Terminal** from the play button:
 
 ```python
 import sys
 print(sys.executable)
 ```
 
-It should print:
+The output should match the path above. If that interpreter is missing or imports still fail with it selected, tell a TA rather than reinstalling packages.
+
+For `QARM_LAB_ENV` or missing support-file errors, reopen VS Code and retry. If the error persists, show it to a TA.
+
+### Git asks for your name and email
+
+Set these for the current repository, using your own details:
 
 ```text
-C:\ProgramData\Qarm\Python\venv\Scripts\python.exe
+git config user.name "Your Name"
+git config user.email "your-email@example.com"
 ```
+
+These details label your commits; they do not sign you into GitHub. Omit `--global` on lab computers so the settings apply only to this repository. For other Git questions, see [Using Git and the Command Line](personal-computer-setup.md#using-git-and-the-command-line).
