@@ -18,11 +18,8 @@ QArm_Interface = QArm_Lab_interface()
 start_phi = np.array([1.0, 1.0, -1.0, 1.0])
 end_phi = np.array([-1.0, 0.0, 0.0, 0.0])
 
-mode = "-1"
-while(mode != '0' and mode != '1'):
-    mode = input("Enter 1 for real hardware, 0 for simulation: ")
 
-with QArm(hardware=int(mode), readMode=0) as myArm:
+with QArm(hardware=0, readMode=0) as myArm:
     QArm_Interface.attach_QArm(myArm)
 
     for i in range(10):
