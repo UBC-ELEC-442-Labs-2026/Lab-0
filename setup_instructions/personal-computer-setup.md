@@ -1,6 +1,6 @@
 # ELEC 442 QArm Lab Setup for Personal Computers
 
-**Last updated:** September 28, 2026
+**Last updated:** November 3, 2026
 
 > This guide is for a **personal computer**. Lab computers have already been configured.
 
@@ -68,7 +68,7 @@ If you completed the short version, skip the detailed steps and continue to [Usi
 
 ## Detailed version
 
-## 1. Create a repository on GitHub
+## 1a. Create a repository on GitHub
 
 Each lab has a repository (repo) template in the organization [UBC-ELEC-442-Labs-2026](https://github.com/UBC-ELEC-442-Labs-2026). Fer example [Lab 1](https://github.com/UBC-ELEC-442-Labs-2026/Lab-1) and [Lab 2](https://github.com/UBC-ELEC-442-Labs-2026/Lab-2).
 
@@ -89,7 +89,7 @@ Each person should:
 7. Invite the required TA(s) by their GitHub username.
    - For Winter 2026, your TA is Louis with GitHub username `13bytes`.
 
-## 2. Find the repository's clone URL
+## 1b. Find the repository's clone URL
 
 Your new repository has its own URL. Copy this URL, rather than the course template URL, so that you can push your work to your own repository. It will look like:
 
@@ -105,7 +105,7 @@ To copy it from your GitHub repository page:
 
 3. Copy the URL.
 
-## 3. Clone the repository
+## 2. Clone the repository
 
 1. Open **PowerShell** on Windows or **Terminal** on macOS/Linux. In VS Code, you can use **Terminal > New Terminal**.
 
@@ -145,7 +145,7 @@ To copy it from your GitHub repository page:
 
    `code .` opens the current folder in VS Code; the dot means “this folder.” Opening the top-level repository folder ensures that VS Code applies the repository's `.vscode` workspace settings.
 
-## 4. Trust the cloned lab folder
+## 3. Trust the cloned lab folder
 
 The first time VS Code opens a newly cloned repository, it may enter Restricted Mode.
 
@@ -155,7 +155,7 @@ The first time VS Code opens a newly cloned repository, it may enter Restricted 
 
 3. Click **Trust**.
 
-## 5. Add VS Code extensions
+## 4. Add VS Code extensions
 
 Python itself is the interpreter that runs your `.py` files. The VS Code Python extension adds Python-specific IDE features such as interpreter selection, code completion, linting, debugging, and the `Run Python File` button found at the top right.
 
@@ -167,7 +167,7 @@ Python itself is the interpreter that runs your `.py` files. The VS Code Python 
 
 4. You can go back by selecting `Explorer`.
 
-## 6. Select the Python Interpreter
+## 5. Select the Python Interpreter
 
 VS Code may automatically select the Python installation configured in the previous guide. To ensure the correct interpreter is being used:
 
@@ -204,7 +204,7 @@ For the **Windows virtual QArm setup**, continue with the simulator startup and 
 | QArm is unavailable in QLabs                           | Ask a TA to check your course access.                                                                                                                            |
 | Keyboard Navigator reports `expected 3, got 2`         | See the [temporary bug fix](additional/bug-fix.md) for that specific error.                                                                                      |
 
-## 7. The Labs
+## 6. The Labs
 
 ### Pre-Lab
 
