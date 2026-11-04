@@ -1,6 +1,6 @@
 # ELEC 442 QArm Lab Computer Quick Start
 
-**Last updated:** September 28, 2026
+**Last updated:** November 3, 2026
 
 > Lab computers are already configured. Do not reinstall Python, install packages, or run the personal-computer setup scripts.
 
@@ -19,9 +19,19 @@ code .
 
 Replace the placeholders, including the angle brackets, with your team's URL and folder name (e.g. `ELEC442-Lab1-Team03`). If prompted to sign into GitHub, use an account with access to the team repository.
 
-If already cloned, skip `git clone` and open the existing folder. Use the repository's **top-level folder**, not just its `code` subfolder, so VS Code loads the lab's workspace settings. If `code .` is not recognized, use **File > Open Folder**. Choose **Trust** if prompted, after checking that this is your team's folder.
+If already cloned, skip `git clone` and open the existing folder. Use the repository's **top-level folder**, not just its `code` subfolder, so VS Code loads the lab's workspace settings. If `code .` is not recognized, use **File > Open Folder**. 
 
-## 2. Get the Latest Code
+## 2. Trust the Repository
+
+The first time VS Code opens the repository, it may enter Restricted Mode.
+
+1. Click **Manage**.
+2. Confirm that this is your team's lab repository.
+3. Click **Trust**.
+
+VS Code's bottom-right corner should then show `3.13.11 (venv)`, and new terminals start with `(venv)`.
+
+## 3. Get the Latest Code
 
 From inside the repository, run:
 
@@ -38,7 +48,7 @@ git pull --ff-only
 
 If there are changes left from an earlier session, review them with your team before continuing. For uncommitted changes or a failed pull, follow the [Git troubleshooting steps](personal-computer-setup.md#if-the-pull-does-not-succeed).
 
-## 3. Complete the Lab
+## 4. Complete the Lab
 
 Follow the lab instructions for QArm startup, operation, and shutdown. Edit your team's files; the support code and demos in the desktop `lab-machine-env` shortcut are read-only.
 
@@ -46,7 +56,7 @@ If Python is missing or imports fail, use the [interpreter steps below](#python-
 
 Save and share useful progress throughout the session using VS Code's **Source Control** panel: review your changes, stage them with **+**, enter a commit message, then **Commit** and **Sync Changes**. See [Saving and sharing your work](personal-computer-setup.md#saving-and-sharing-your-work) for details.
 
-## 4. Before Signing Out
+## 5. Before Signing Out
 
 - Shut down the QArm as instructed and stop running scripts.
 - Save, stage, **Commit**, and **Sync Changes** in VS Code. Confirm your latest commit and files appear on GitHub before leaving. If syncing fails, resolve the error or save a separate copy of your work.
@@ -56,6 +66,8 @@ Save and share useful progress throughout the session using VS Code's **Source C
 ## Troubleshooting
 
 ### Python interpreter is missing or incorrect
+
+When it's working, VS Code's bottom-right corner shows `3.13.11 (venv)` and a new terminal starts with `(venv)`. If not:
 
 1. Open a `.py` file, press `Ctrl+Shift+P`, and select **Python: Select Interpreter**.
 2. Select the following interpreter, or use **Enter interpreter path** to paste it:

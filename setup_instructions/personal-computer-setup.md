@@ -46,7 +46,7 @@ If you are already comfortable with VS Code, Python interpreters, Git, and GitHu
 
 4. Install the VS Code **Python** extension published by **Microsoft**. The `vscode-pdf` extension is optional.
 
-5. Select the interpreter configured in the [installation guide](personal-software-installation.md): the global Python version reported by the Quanser setup script, or the interpreter where you installed NumPy for the basic setup. Follow the [verification steps](#verify-your-setup) before starting the lab.
+5. It is normal for VS Code to say that "An Invalid Python interpreter is selected" as the respository is set up for the lab laptops. Select the interpreter configured in the [installation guide](personal-software-installation.md): the global Python version reported by the Quanser setup script, or the interpreter where you installed NumPy for the basic setup. Follow the [verification steps](#verify-your-setup) before starting the lab.
 
 6. Complete the **Pre-Lab individually** in this repository. Commit and push your work when finished, and follow the individual Pre-Lab [submission](#code-submission) instructions below.
 
@@ -169,7 +169,7 @@ Python itself is the interpreter that runs your `.py` files. The VS Code Python 
 
 ## 5. Select the Python Interpreter
 
-VS Code may automatically select the Python installation configured in the previous guide. To ensure the correct interpreter is being used:
+Each lab repository is set up for the lab laptops, whose Python is in `C:\ProgramData\Qarm\Python\venv`. That folder doesn't exist on your computer, so when you open a new lab repository VS Code might say "An Invalid Python interpreter is selected", and the bottom-right corner shows **Select Interpreter**. This is expected. Click **Select Python Interpreter** in the message, or select your own Python through the steps below. VS Code remembers your choice for that repository.
 
 1. Open a `.py` file, then press `Ctrl+Shift+P` (`Cmd+Shift+P` on macOS).
 
