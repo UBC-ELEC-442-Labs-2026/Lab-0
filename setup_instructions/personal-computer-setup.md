@@ -46,7 +46,7 @@ If you are already comfortable with VS Code, Python interpreters, Git, and GitHu
 
 4. Install the VS Code **Python** extension published by **Microsoft**. The `vscode-pdf` extension is optional.
 
-5. It is normal for VS Code to say that "An Invalid Python interpreter is selected" as the respository is set up for the lab laptops. Select the interpreter configured in the [installation guide](personal-software-installation.md): the global Python version reported by the Quanser setup script, or the interpreter where you installed NumPy for the basic setup. Follow the [verification steps](#verify-your-setup) before starting the lab.
+5. It is normal for VS Code to say that "An Invalid Python interpreter is selected" as the repository is set up for the lab laptops. Select the interpreter configured in the [installation guide](personal-software-installation.md): the global Python version reported by the Quanser setup script, or the interpreter where you installed NumPy for the basic setup. Follow the [verification steps](#verify-your-setup) before starting the lab.
 
 6. Complete the **Pre-Lab individually** in this repository. Commit and push your work when finished, and follow the individual Pre-Lab [submission](#code-submission) instructions below.
 
