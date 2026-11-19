@@ -1,6 +1,6 @@
 # ELEC 442 QArm Lab Setup for Personal Computers
 
-**Last updated:** November 3, 2026
+**Last updated:** November 18, 2026
 
 > This guide is for a **personal computer**. Lab computers have already been configured.
 
@@ -50,6 +50,8 @@ If you are already comfortable with VS Code, Python interpreters, Git, and GitHu
 
 6. Complete the **Pre-Lab individually** in this repository. Commit and push your work when finished, and follow the individual Pre-Lab [submission](#code-submission) instructions below.
 
+7. For the **In-Class Lab**, your team works in one new repository. One teammate creates it from the same lab template, names it `ELEC442-Lab<lab_num>-Team<2_digit_team_num>` (e.g. `ELEC442-Lab1-Team03`), and adds the other teammates as collaborators. If specified by the lab document, copy over any Pre-Lab code the In-Class Lab needs.
+<!--
 7. For the **In-Class Lab and shared Post-Lab code**, switch to one repository for the whole team. Either:
    - create a new repository named `ELEC442-Lab<lab_num>-Team<2_digit_team_num>` (e.g. `ELEC442-Lab1-Team03`) from the lab template and copy over any required Pre-Lab code; or
    - rename one teammate's existing Pre-Lab repository to `ELEC442-Lab<lab_num>-Team<2_digit_team_num>` and add the other teammates as collaborators.
@@ -59,7 +61,7 @@ If you are already comfortable with VS Code, Python interpreters, Git, and GitHu
    ```text
    git remote set-url origin https://github.com/your-user-name/ELEC442-Lab<lab_num>-Team<2_digit_team_num>
    ```
-
+   -->
 8. Keep the team repository **private** and give all teammates and the required TA(s) access. Everyone else should clone that team repository and open it in VS Code. From this point onward, use it for shared lab code and keep it synced with GitHub.
 
 9. Read the section on [submission](#code-submission).
@@ -218,8 +220,13 @@ You're now in good shape to start the individual Pre-Lab.
 
 ### In-Class Lab
 
-The **Pre-Lab is completed individually**, so each student begins with their own repository. For the In-Class Lab and the shared code portion of the Post-Lab, your team should instead work from **one shared repository**.
+The **Pre-Lab is completed individually**, so each student begins with their own repository. For the In-Class Lab, your team instead works from **one shared repository**, created new from the lab template.
 
+One teammate creates the team repository from the same lab template by following the process in [Section 1](#1-create-a-repository-on-github). Name it in the format `ELEC442-Lab<lab_num>-Team<2_digit_team_num>`. For example, `ELEC442-Lab1-Team03`. If the In-Class Lab needs any Pre-Lab code, copy it over.
+
+Keep the repository **private** and add all teammates and the required TA(s) as collaborators. Teammates must accept the invitation before they can push.
+
+<!--
 Choose one of the following options:
 
 - **Option A: Create a new team repository**
@@ -245,8 +252,9 @@ Choose one of the following options:
   The local folder itself does not need to be renamed.
 
 Keep the reused repository **private** and check that the required TA(s) still have access.
+-->
 
-Only one shared repository should be used by the team from this point onward. Everyone else should clone that same repository and open it in VS Code before beginning the In-Class Lab. Creating a team repository does not replace each student's individual Pre-Lab submission.
+Only one shared repository should be used by the team from this point onward. Everyone else should clone that same repository and open it in VS Code before beginning the In-Class Lab. Creating a team repository does not replace each student's individual submission.
 
 # Using Git and the Command Line
 
@@ -439,14 +447,17 @@ Follow the formats below unless the lab instructions or Canvas specify otherwise
 
 ### Pre-Lab
 
-Submit a `.zip` file containing your modified code to Canvas. To avoid penalties create a zip file `l<lab_num>_<student_num>.zip`, where `<student_num>` is your student number and `<lab_num>` is the lab number.
-For example
+Submit a `.zip` file containing your modified code to Canvas. To avoid penalties: 
 
-```text
-l1_12345678.zip
-```
+Name the zip file `l<lab_num>_<student_num>.zip`, where `<student_num>` is your student number and `<lab_num>` is the lab number.
 
-1. Create a folder with the same name as above, but without the `.zip` extension:
+   For example
+
+   ```text
+   l1_12345678.zip
+   ```
+
+1. Include (create or rename) a folder with the same name as above, but without the `.zip` extension:
 
    ```text
    l1_12345678
@@ -469,13 +480,13 @@ l1_12345678.zip
 
 The names of the `.py` files will depend on the lab. Preserve their original filenames.
 
-Submit written responses on Canvas separately.
+Written responses are submitted individually on Canvas, as described in your lab's Submission section.
 
-### In-Class Lab and Post-Lab
+### In-Class Lab (team)
 
 One teammate should submit a `.zip` file containing the team's modified code to Canvas. To avoid penalties:
 
-1. Name the zip file `l<lab_num>_team<team_num>.zip`, where `<team_num>` is your **two digit** team number and `<lab_num>` is the lab number.
+Name the zip file `l<lab_num>_team<team_num>.zip`, where `<team_num>` is your **two digit** team number and `<lab_num>` is the lab number.
 
    For example:
 
@@ -483,17 +494,17 @@ One teammate should submit a `.zip` file containing the team's modified code to 
    l1_team03.zip
    ```
 
-2. Create a folder with the same name, but without the `.zip` extension:
+1. Include (create or rename) a folder with the same name, but without the `.zip` extension:
 
    ```text
    l1_team03
    ```
 
-3. Inside this folder, include a folder named `code`.
+2. Inside this folder, include a folder named `code`.
 
-4. Inside `code`, include **only the Python files that you modified as part of the lab**. Do not include lab instructions, worksheets, VS Code settings, unmodified starter files, or other files and directories.
+3. Inside `code`, include **only the Python files that you modified as part of the lab**. Do not include lab instructions, worksheets, VS Code settings, unmodified starter files, or other files and directories.
 
-5. Zip the outer folder. The final submission should have the following structure:
+4. Zip the outer folder. The final submission should have the following structure:
 
    ```text
    l1_team03.zip
@@ -504,6 +515,5 @@ One teammate should submit a `.zip` file containing the team's modified code to 
            └── ...
    ```
 
-The names of the `.py` files will depend on the lab. Preserve their original filenames. Modified files from the pre-lab may remain in the lab submission.
+The names of the `.py` files will depend on the lab. Preserve their original filenames.
 
-Submit individual written responses on Canvas separately.
